@@ -17,8 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from blog_arquitectura.views import index
+from app_blog.views import obras_arq_view, inst_edu_view, bibliografia_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/',index,name='index')
+    path('index/',index,name='index'),
+    path('obras_arq_view/', obras_arq_view,name='obras_arq_view'),
+    path('inst_edu_view/', inst_edu_view,name='inst_edu_view'),
+    path('bibliografia_view/', bibliografia_view,name='bibliografia_view'),
 ]
