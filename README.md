@@ -13,7 +13,7 @@ Desde una consola o el bash de git usar el siguiente comando
 3. Cada modelo cuenta con un formulario que permite agregar contenido
 4. Se incorpora un boton "search" para poder buscar en la base de datos
 
-## Contenido del blog / explicación del proyecto ##
+## Funcionalidades ##
 - Se crea una template "base.html" de la cual se heredan caracteristicas
 - Las 3 clases se crean en models.py
 - Los formularios se crean en forms.py
