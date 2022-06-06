@@ -1,7 +1,8 @@
 # blogArquitectura_BembeniukGonzalez
 ## Descarga e Instalación ##
 Desde una consola o el bash de git usar el siguiente comando
-    git clone https://github.com/raamgonzalez/Entrega1_BembeniukGonzalez.git
+- git clone https://github.com/raamgonzalez/Entrega1_BembeniukGonzalez.git
+Luego:
 - pip install -r requirements.txt
 - python manage.py migrate
 - python manage.py runserver
