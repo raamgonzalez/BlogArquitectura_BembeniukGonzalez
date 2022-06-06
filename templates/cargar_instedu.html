@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h3>Cargar Instituciones educativas</h3>
+{% endblock %}
+
+
+{% block contenido %}
+
+{% if form %}
+    Aca va el contenido para cargar institución
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit", value="Enviar">
+</form>
+
+{% elif new_inst %}
+
+    <br>Nombre de la institución: {{new_inst.nombre_inst}}</br>
+    <br>Ubicación de la institución: {{new_inst.ubicacion_inst}}</br>
+
+{% endif %}
+{% endblock %}
+
+

@@ -1,18 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h3>Obras Arquitectura</h3>
+{% endblock %}
+
+{% block contenido %}
+
+<div class="card" style="width: 18rem;">
     {% for obra in obras %}
-        {{obra.nombre_obra}}
-        {{obra.autor_obra}}
-        {{obra.ubicacion_obra}}
-        {{obra.año}}
-        {{obra.tipo}}
+
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{obra.nombre_obra}}</h5>
+        <p class="card-text">{{obra.autor_obra}}</p>
+        <p class="card-text">{{obra.ubicacion_obra}}</p>
+        <p class="card-text">{{obra.año}}</p>
+        <p class="card-text">{{obra.tipo}}</p>
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+        </div>
+    </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
