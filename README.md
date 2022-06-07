@@ -1,3 +1,5 @@
+# Blog de Arquitectura. Autores: Bembeniuk_Gonzalez #
+
 ## Descarga ##
 Desde una consola o el bash de git usar el siguiente comando:
 - git clone https://github.com/raamgonzalez/Entrega1_BembeniukGonzalez.git
