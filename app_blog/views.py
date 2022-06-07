@@ -67,3 +67,8 @@ def cargar_bibliografia(request):
             )
             context = {'new_biblio':new_biblio}
         return render(request,'cargar_biblio.html',context=context)
+
+def search_obra(request):
+    obras = Obra_arq.objects.filter(nombre_obra__icontains = request.GET['search'])
+    context = {'obras':obras}
+    return render(request,'search_obra.html', context=context)

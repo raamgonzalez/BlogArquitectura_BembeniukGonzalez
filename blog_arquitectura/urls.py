@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from blog_arquitectura.views import index
-from app_blog.views import obras_arq_view, inst_edu_view, bibliografia_view, cargar_obra, cargar_Instedu, cargar_bibliografia
+from app_blog.views import obras_arq_view, inst_edu_view, bibliografia_view, cargar_obra, cargar_Instedu, cargar_bibliografia,search_obra
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,5 @@ urlpatterns = [
     path('obras_arq_view/cargar_obra/', cargar_obra,name='cargar_obra'),
     path('inst_edu_view/cargar_Instedu/', cargar_Instedu ,name='cargar_Instedu'),
     path('bibliografia_view/cargar_bibliografia/', cargar_bibliografia ,name='cargar_bibliografia'),
-
+    path('obras_arq_view/search_obra/', search_obra ,name='search_obra'),
 ]

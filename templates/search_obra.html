@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h3>Obras Arquitectura</h3>
+{% endblock %}
+
+{% block contenido %}
+
+Aca va el contenido de buscar productos
+
+<div class="card" style="width: 18rem;">
+    {% for obra in obras %}
+
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{obra.nombre_obra}}</h5>
+        <p class="card-text">{{obra.autor_obra}}</p>
+        <p class="card-text">{{obra.ubicacion_obra}}</p>
+        <p class="card-text">{{obra.año}}</p>
+        <p class="card-text">{{obra.tipo}}</p>
+        <a href="#" class="btn btn-primary">Ver detalle</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
