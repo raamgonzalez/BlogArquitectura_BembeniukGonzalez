@@ -23,6 +23,12 @@
     <br>Nombre de la institución: {{new_inst.nombre_inst}}</br>
     <br>Ubicación de la institución: {{new_inst.ubicacion_inst}}</br>
 
+{% elif errors %}
+
+    <div style="color: red;">
+    {{errors}}
+    </div>
+
 {% endif %}
 {% endblock %}
 

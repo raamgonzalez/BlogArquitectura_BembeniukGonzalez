@@ -23,6 +23,12 @@
     <br>Nombre de Bibliografia: {{new_biblio.nombre_biblio}}</br>
     <br>Autor de Bibliografia: {{new_biblio.autor_biblio}}</br>
 
+{% elif errors %}
+
+    <div style="color: red;">
+    {{errors}}
+    </div>
+
 {% endif %}
 {% endblock %}
 

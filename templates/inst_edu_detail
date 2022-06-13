@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h3>Detalle Institucion Educativa</h3>
+{% endblock %}
+
+{% block contenido %}
+    <br> Nombre de la institución: {{instituciones.nombre_inst}}</br>
+    <br> Ubicación de la institución: {{instituciones.ubicacion_inst}}</br>
+{% endblock %}

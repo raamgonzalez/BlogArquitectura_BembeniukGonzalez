@@ -6,8 +6,16 @@
 
 {% block contenido %}
     {% for institucion in instituciones %}
-    <br> Nombre de la institución: {{institucion.nombre_inst}}</br>
-    <br> Ubicación de la institución: {{institucion.ubicacion_inst}}</br>
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{institucion.nombre_inst}}</h5>
+        <p class="card-text">{{institucion.ubicacion_inst}}</p>
+        <a href="/detail_instedu/{{institucion.id}}/" class="btn btn-primary">Ver mas!</a>
+        </div>
+    </div>
 {% endfor %}
 
 {% endblock %}
+
+

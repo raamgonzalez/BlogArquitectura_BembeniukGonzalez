@@ -6,8 +6,15 @@
 
 
 {% block contenido %}
-    <br>{% for libro in libros %}
-    <br>Nombre de autor de bibligorafia: {{libro.nombre_biblio}}</br>
-    <br>Apellido de autor de Bibliografia: {{libro.autor_biblio}}</br>
-    {% endfor %}</br>
+    {% for libro in libros %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{libro.nombre_biblio}}</h5>
+        <p class="card-text">{{libro.autor_biblio}}</p>
+        <a href="/detail_biblio/{{libro.id}}/" class="btn btn-primary">Ver mas!</a>
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
+

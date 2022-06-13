@@ -6,9 +6,9 @@
 
 {% block contenido %}
 
-<div class="card" style="width: 18rem;">
-    {% for obra in obras %}
 
+    {% for obra in obras %}
+<div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{obra.nombre_obra}}</h5>
@@ -16,8 +16,9 @@
         <p class="card-text">{{obra.ubicacion_obra}}</p>
         <p class="card-text">{{obra.año}}</p>
         <p class="card-text">{{obra.tipo}}</p>
-        <a href="#" class="btn btn-primary">Ver detalle</a>
+        <a href="/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver mas!</a>
         </div>
     </div>
     {% endfor %}
+
 {% endblock %}
