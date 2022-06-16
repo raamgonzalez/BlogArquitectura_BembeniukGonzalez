@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<h3>Arquitectos</h3>
+{% endblock %}
+
+{% block contenido %}
+    {% for arquitecto in arquitectos %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{arquitecto.nombre_arqui}}</h5>
+        <p class="card-text">{{arquitecto.apellido_arqui}}</p>
+        <a href="/app_blog/detail_arquitecto/{{arquitecto.id}}/" class="btn btn-primary">Ver detalle!</a>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
+
+

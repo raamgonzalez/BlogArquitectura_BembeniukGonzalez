@@ -9,11 +9,10 @@
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{obras.nombre_obra}}</h5>
-        <p class="card-text">{{obras.autor_obra}}</p>
         <p class="card-text">{{obras.ubicacion_obra}}</p>
         <p class="card-text">{{obras.año}}</p>
         <p class="card-text">{{obras.tipo}}</p>
-        <a href="/app_blog/detail_obrasarq/{{obra.id}}" class="btn btn-primary">Ver mas!</a>
         </div>
     </div>
+    {{obras.descripcion}}
 {% endblock %}
