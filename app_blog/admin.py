@@ -9,4 +9,4 @@ class Obra_arq(admin.ModelAdmin):
 
 @admin.register(Arquitecto)
 class Arquitecto(admin.ModelAdmin):
-    list_display = ['nombre_arqui','apellido_arqui']
+    list_display = ['nombre_apellido_arqui']

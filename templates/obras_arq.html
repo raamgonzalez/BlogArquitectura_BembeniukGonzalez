@@ -6,8 +6,7 @@
 
 {% block contenido %}
 
-
-    {% for obra in obras %}
+    {% for obra in object_list %}
 <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
@@ -15,7 +14,7 @@
         <p class="card-text">{{obra.ubicacion_obra}}</p>
         <p class="card-text">{{obra.año}}</p>
         <p class="card-text">{{obra.tipo}}</p>
-        <a href="/app_blog/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver detalle!</a>
+        <a href="/app_blog/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver detalle</a>
         </div>
     </div>
     {% endfor %}

@@ -5,13 +5,12 @@
 {% endblock %}
 
 {% block contenido %}
-    {% for arquitecto in arquitectos %}
+    {% for arquitecto in object_list %}
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class="card-title">{{arquitecto.nombre_arqui}}</h5>
-        <p class="card-text">{{arquitecto.apellido_arqui}}</p>
-        <a href="/app_blog/detail_arquitecto/{{arquitecto.id}}/" class="btn btn-primary">Ver detalle!</a>
+        <h5 class="card-title">{{arquitecto.nombre_apellido_arqui}}</h5>
+        <a href="/app_blog/detail_arquitecto/{{arquitecto.id}}/" class="btn btn-primary">Ver detalle</a>
         </div>
     </div>
 {% endfor %}

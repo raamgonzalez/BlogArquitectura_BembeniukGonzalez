@@ -8,6 +8,5 @@ class obras_arq_view_form(forms.Form):
     tipo = forms.CharField(max_length=100)
 
 class arquitecto_view_form(forms.Form):
-    nombre_arqui = forms.CharField(max_length=100)
-    apellido_arqui = forms.CharField(max_length=100)
+    nombre_apellido_arqui = forms.CharField(max_length=100)
 

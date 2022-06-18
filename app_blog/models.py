@@ -16,12 +16,11 @@ class Obra_arq(models.Model):
         return self.nombre_obra
 
 class Arquitecto(models.Model):
-    nombre_arqui = models.CharField(max_length=100)
-    apellido_arqui = models.CharField(max_length=100)
+    nombre_apellido_arqui = models.CharField(max_length=100)
 
     class Meta:
         verbose_name = 'Arquitecto'
         verbose_name_plural = 'Arquitectos'
 
     def __str__(self):
-        return self.nombre_arqui
+        return self.nombre_apellido_arqui
