@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+{% endblock %}
+
+{% block contenido %}
+<div style="margin-left:1rem"><h4 style='color: red'>Estas por eliminar la obra {{object.nombre_obra}}, estas seguro? </h4></div>
+<form method = "POST">
+    {% csrf_token %}
+    <button class="btn btn-danger" style="margin-left:1rem" type="submit">Eliminar</button>
+</form>
+{% endblock %}

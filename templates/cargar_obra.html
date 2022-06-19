@@ -1,40 +1,21 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<h3>Cargar Obra</h3>
 {% endblock %}
 
 
 {% block contenido %}
 
 {% if form %}
-    <H2>Aca va el contenido para cargar obra</H2>
+<h4 style="margin-left:1rem">Cargue una Obra</h4>
 
-    <form method="POST" action="">
+    <form style="margin-left:1rem" method="POST" action="">
         {% csrf_token %}
         <table>
             {{form.as_table}}
         </table>
         <input type="submit", value="Enviar">
 </form>
-
-{% elif new_obra %}
-
-<img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{new_obra.nombre_obra}}</h5>
-            <p class="card-text">{{new_obra.ubicacion_obra}}</p>
-            <p class="card-text">{{new_obra.año}}</p>
-            <p class="card-text">{{new_obra.tipo}}</p>
-        </div>
-    </div>
-
-
-{% elif errors %}
-
-    <div style="color: red;">
-    {{errors}}
-    </div>
 
 {% endif %}
 {% endblock %}

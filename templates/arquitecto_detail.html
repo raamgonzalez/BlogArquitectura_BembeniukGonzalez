@@ -9,7 +9,8 @@
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{object.nombre_apellido_arqui}}</h5>
-        <a href="#" class="btn btn-primary">Editar</a>
+        <a href="/app_blog/update_arquitecto/{{object.id}}/" class="btn btn-primary">Editar</a>
+        <a href="/app_blog/delete_arquitecto/{{object.id}}/" class="btn btn-danger">Eliminar</a>
     </div>
 </div>
 {% endblock %}

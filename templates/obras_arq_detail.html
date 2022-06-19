@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<h3>Detalle de obra</h3>
+<div style="margin-left:1rem"><h3>Detalle de obra</h3></div>
 {% endblock %}
 
 {% block contenido %}
@@ -12,7 +12,9 @@
         <p class="card-text">{{object.ubicacion_obra}}</p>
         <p class="card-text">{{object.año}}</p>
         <p class="card-text">{{object.tipo}}</p>
-        <a href="#" class="btn btn-primary">Editar</a>
+        <p class="card-text">{{object.descripcion}}</p>
+        <a href="/app_blog/update_obra/{{object.id}}/" class="btn btn-primary">Editar</a>
+        <a href="/app_blog/delete_obra/{{object.id}}/" class="btn btn-danger">Eliminar</a>
         </div>
     </div>
     {{obras.descripcion}}

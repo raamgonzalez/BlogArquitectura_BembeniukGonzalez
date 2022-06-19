@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+<div style="margin-left:1rem"><h3>Actualizar Arquitecto</h3></div>
+{% endblock %}
+
+
+{% block contenido %}
+<h4 style="margin-left:1rem">Complete los campos a actualizar</h4>
+    {% if form %}
+
+
+            <form style="margin-left:1rem" method="POST" action="">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+                <input type="submit", value="Enviar">
+        </form>
+
+    {% endif %}
+{% endblock %}

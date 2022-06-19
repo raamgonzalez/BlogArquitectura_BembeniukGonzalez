@@ -1,12 +1,14 @@
+from dataclasses import field
+from pyexpat import model
 from django import forms
+from app_blog.models import Obra_arq, Arquitecto
 
-class obras_arq_view_form(forms.Form):
-    nombre_obra = forms.CharField(max_length=100)
-    ubicacion_obra = forms.CharField(max_length=100)
-    descripcion = forms.CharField(max_length=300)
-    año = forms.IntegerField()
-    tipo = forms.CharField(max_length=100)
+class obras_arq_view_form(forms.ModelForm):
+    class Meta:
+        model =  Obra_arq
+        fields = '__all__'
 
-class arquitecto_view_form(forms.Form):
-    nombre_apellido_arqui = forms.CharField(max_length=100)
-
+class arquitecto_view_form(forms.ModelForm):
+    class Meta:
+        model = Arquitecto
+        fields = '__all__'
