@@ -33,10 +33,26 @@
                 <li class="nav-item active">
                     <a class="btn btn-light" href="/app_blog/arquitectos_view/cargar_arqui">Cargar Arquitecto<span class="sr-only">(current)</span></a>
                 </li>
-            </ul>
-            <ul class="navbar-nav p-3">
-            <li class="nav-item active">
+                <li class="nav-item active" style="margin-right:37rem">
                     <a class="btn btn-light" href="/app_blog/about">Nosotros<span class="sr-only">(current)</span></a>
+                </li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item active">
+                    <span class="badge text-bg-light" >{{request.user.username}}</span>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn btn-light" href="/logout/">Logout<span class="sr-only">(current)</span></a>
+                </li>
+                {% else %}
+                <li class="nav-item active">
+                    <a class="btn btn-light" href="/login/">Login<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="btn btn-light" href="/register/">Register<span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+                <li class="nav-item active">
+                    <a class="btn btn-light" href="/app_blog/contact/">Contacto<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action = "/app_blog/obras_arq_view/search_obra/" method = "GET">

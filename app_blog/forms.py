@@ -10,5 +10,5 @@ class obras_arq_view_form(forms.ModelForm):
 
 class arquitecto_view_form(forms.ModelForm):
     class Meta:
-        model = Arquitecto
+        model = Arquitecto()
         fields = '__all__'

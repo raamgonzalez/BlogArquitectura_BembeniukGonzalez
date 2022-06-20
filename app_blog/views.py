@@ -3,8 +3,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
 from app_blog.models import Obra_arq, Arquitecto
+from django.contrib.auth.mixins import LoginRequiredMixin
 from app_blog.forms import obras_arq_view_form, arquitecto_view_form
 from django.http import HttpResponse
+
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 
 class Obras_arq_view(ListView):
@@ -53,7 +55,7 @@ class Update_arquitecto(UpdateView):
     def get_success_url(self):
         return reverse('detail_arquitecto', kwargs={'pk':self.object.pk})
 
-class Create_obra(CreateView):
+class Create_obra(LoginRequiredMixin,CreateView):
     model = Obra_arq
     template_name = 'cargar_obra.html'
     fields = '__all__'
@@ -61,7 +63,7 @@ class Create_obra(CreateView):
     def get_success_url(self):
         return reverse('detail_obrasarq', kwargs={'pk': self.object.pk})
 
-class Create_arqui(CreateView):
+class Create_arqui(LoginRequiredMixin,CreateView):
     model = Arquitecto
     template_name = 'cargar_arquitecto.html'
     fields = '__all__'
