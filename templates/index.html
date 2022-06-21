@@ -5,9 +5,11 @@
 
 {% block contenido %}
 {{message}}
-<div style="margin-left:1rem"><h3>Bienvenido al blog de arquitectura. Aquí, usted podrá encontrar 2 secciones:</h3>
-<p>- Obras de arquitectura</p>
-<p>- Arquitectos</p></div>
 
+<div style="margin-left:1rem"><h2>Bienvenido/a al blog de arquitectura!</h2> 
+<div style="margin-left:0rem"><h3>Aquí, usted podrá encontrar las siguientes secciones:</h3> 
 
+{% for contenido in object_list %}
+<p>- {{contenido}}</p>
+{% endfor %}
 {% endblock %}

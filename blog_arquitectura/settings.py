@@ -43,6 +43,7 @@ BASE_APPS = [
 MY_APPS = [
     'app_blog',
     'users',
+    'index',
 ]
 
 THIRD_APPS = [
