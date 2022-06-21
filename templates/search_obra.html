@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<h3>Obras Arquitectura</h3>
+<div style="margin-left:1rem"><h3>Obras Arquitectura</h3></div>
 {% endblock %}
 
 {% block contenido %}
 
 <div style="margin-left:1rem"><h5>Encontramos esto</h5></div>
-
-<div class="card" style="width: 18rem;">
+<div class="container">
+    <div class="row">
     {% for obra in obras %}
-
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">{{obra.nombre_obra}}</h5>
-        <p class="card-text">{{obra.ubicacion_obra}}</p>
-        <p class="card-text">{{obra.año}}</p>
-        <p class="card-text">{{obra.tipo}}</p>
-        <a href="#" class="btn btn-primary">Ver detalle</a>
-        </div>
+    <div class="col"></div>
+        <div class="card" style="width: 18rem;">
+            <img src="{{obra.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{obra.nombre_obra}}</h5>
+            <p class="card-text">{{obra.ubicacion_obra}}</p>
+            <p class="card-text">{{obra.año}}</p>
+            <p class="card-text">{{obra.tipo}}</p>
+            <p class="card-text">{{obra.descripcion}}</p>
+            <a href="/app_blog/update_obra/{{obra.id}}/" class="btn btn-primary">Editar</a>
+            <a href="/app_blog/delete_obra/{{obra.id}}/" class="btn btn-danger">Eliminar</a>
     </div>
+</div>
     {% endfor %}
 {% endblock %}

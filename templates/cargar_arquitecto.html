@@ -9,7 +9,7 @@
 {% if form %}
 <h4 style="margin-left:1rem">Cargue un Arquitecto</h4>
 
-    <form style="margin-left:1rem" method="POST" action="">
+    <form style="margin-left:1rem" method="POST" action="" enctype ="multipart/form-data">
         {% csrf_token %}
         <table>
             {{form.as_table}}

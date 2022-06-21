@@ -6,16 +6,17 @@
 
 {% block contenido %}
 {{message}}
-    {% for arquitecto in object_list %}
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">{{arquitecto.nombre_apellido_arqui}}</h5>
-        <a href="/app_blog/detail_arquitecto/{{arquitecto.id}}/" class="btn btn-primary">Ver detalle</a>
+<div class="container">
+    <div class="row row-cols-auto">
+        {% for arquitecto in object_list %}
+        <div class="col">
+        <div class="card" style="width: 13rem; margin: 5px 5px;">
+            <img src="{{arquitecto.image.url}}" class="card-img-top">
+            <div class="card-body">
+            <h5 class="card-title">{{arquitecto.nombre_apellido_arqui}}</h5>
+            <a href="/app_blog/detail_arquitecto/{{arquitecto.id}}/" class="btn btn-primary">Ver detalle</a>
         </div>
     </div>
+</div>
 {% endfor %}
-
 {% endblock %}
-
-

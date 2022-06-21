@@ -6,17 +6,21 @@
 
 {% block contenido %}
 {{message}}
-    {% for obra in object_list %}
-<div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">{{obra.nombre_obra}}</h5>
-        <p class="card-text">{{obra.ubicacion_obra}}</p>
-        <p class="card-text">{{obra.año}}</p>
-        <p class="card-text">{{obra.tipo}}</p>
-        <a href="/app_blog/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver detalle</a>
+<div class="container">
+    <div class="row">
+        {% for obra in object_list %}
+    <div class="col-4">
+        <div class="card" style="width: 18rem; margin: 5px 5px;">
+            <img src="{{obra.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ obra.nombre_obra}}</h5>
+            <p class="card-text">{{obra.ubicacion_obra}}</p>
+            <p class="card-text">{{obra.año}}</p>
+            <p class="card-text">{{obra.tipo}}</p>
+            <a href="/app_blog/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver detalle</a>
         </div>
     </div>
+</div>
     {% endfor %}
 
 {% endblock %}
