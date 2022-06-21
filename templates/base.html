@@ -20,7 +20,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto;" >
                 <li class="nav-item active">
                     <a class="btn btn-light" href="/app_blog/obras_arq_view">Obras de Arquitectura<span class="sr-only">(current)</span></a>
                 </li>
@@ -33,7 +33,7 @@
                 <li class="nav-item active">
                     <a class="btn btn-light" href="/app_blog/arquitectos_view/cargar_arqui">Cargar Arquitecto<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active" style="margin-right:37rem">
+                <li class="nav-item active" style="margin-right:33rem">
                     <a class="btn btn-light" href="/app_blog/about">Nosotros<span class="sr-only">(current)</span></a>
                 </li>
                 {% if request.user.is_authenticated %}
@@ -41,7 +41,9 @@
                     <span class="badge text-bg-light" >{{request.user.username}}</span>
                 </li>
                 <li class="nav-item active">
-                    <img src="{{request.user.user_profile.image.url}}" style="height: 2rem;">
+                    <a class="nav-link" href="/users/detail-user-profile/{{request.user.user_profile.pk}}/">
+                    <img src="{{request.user.user_profile.profile_image.url}}" style="height: 1rem;"/>
+                    </a>
                 </li>
                 <li class="nav-item active">
                     <a class="btn btn-light" href="/logout/">Logout<span class="sr-only">(current)</span></a>

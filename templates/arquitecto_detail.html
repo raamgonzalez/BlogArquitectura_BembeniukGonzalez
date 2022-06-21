@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-<h3>Detalle Arquitecto</h3>
+<div style="margin-left:1rem"><h3>Detalle Arquitecto</h3></div>
 {% endblock %}
 
 {% block contenido %}
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; margin-left:1rem">
         <img src="{{arquitecto.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">{{object.nombre_apellido_arqui}}</h5>

@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
+<div style=background:rgba(62,63,66,0.075);>
 <h3 style="margin-left:50rem">Obras de Arquitectura</h3>
 {% endblock %}
 
 {% block contenido %}
 {{message}}
+
 <div class="container">
     <div class="row">
         {% for obra in object_list %}
