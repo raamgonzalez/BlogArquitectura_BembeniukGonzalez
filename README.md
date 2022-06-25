@@ -69,7 +69,7 @@ Desde una consola o el bash de git usar el siguiente comando:
 13°COMMIT 
 - Se creo la app “index” para que los textos de contenido del sitio sean editados por admin. 
 
-14º COMMIT RAMSI
+14º COMMIT
 - Se agrega UpdateProfile
 - Se agrega DetailProfile
 - Se agregan templates correspondientes
