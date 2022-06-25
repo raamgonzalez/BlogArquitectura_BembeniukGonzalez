@@ -27,7 +27,7 @@ Desde una consola o el bash de git usar el siguiente comando:
 
 ### Contenidos desarollados para la entrega final ###
 8º COMMIT
-- Enlace Arquitectos con Obras mediante categoría.
+- Se genera enlace Arquitectos con Obras mediante categoría.
 - Se agrega campo de descripción en Obra de Arquitectura para que se vea solo en ‘detail’
 - Se agrega método __str__ para que se lea el nombre de la categoria
 - Se agrega template de "Nosotros" + boton en base
