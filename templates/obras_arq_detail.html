@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block contenido %}
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; margin-left:1rem">
+    {% if object.image %}
         <img src="{{obra_arq.image.url}}" class="card-img-top" alt="...">
+    {% endif %}
         <div class="card-body">
         <h5 class="card-title">{{object.nombre_obra}}</h5>
         <p class="card-text">{{object.ubicacion_obra}}</p>

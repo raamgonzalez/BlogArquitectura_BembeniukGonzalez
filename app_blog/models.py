@@ -8,7 +8,7 @@ class Obra_arq(models.Model):
     tipo = models.CharField(max_length=100, null=True)
     descripcion = models.CharField(max_length=300)
     arquitecto = models.ForeignKey('Arquitecto', on_delete = models.CASCADE, related_name='obras')
-    image = models.ImageField(upload_to = 'obras', default = 'default.png')
+    image = models.ImageField(upload_to = 'obras', blank=True, null=True, default = 'default.png')
 
     class Meta:
         verbose_name = 'Obra de Arquitectura'
@@ -20,7 +20,7 @@ class Obra_arq(models.Model):
 class Arquitecto(models.Model):
     nombre_apellido_arqui = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=300)
-    image = models.ImageField(upload_to = 'arquitectos',  default = 'default.png')
+    image = models.ImageField(upload_to = 'arquitectos', blank=True, null=True, default = 'default.png')
 
     class Meta:
         verbose_name = 'Arquitecto'

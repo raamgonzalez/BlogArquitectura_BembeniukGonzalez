@@ -45,7 +45,7 @@ Desde una consola o el bash de git usar el siguiente comando:
 - se aplica reverse a obra y arqui
 - Se modifican textos en html
 
-11º COMMIT 
+11º COMMIT
 - Se agrega login_view
 - Se agrega logout_view
 - Se agrega register_view
@@ -66,7 +66,7 @@ Desde una consola o el bash de git usar el siguiente comando:
 - Se ordenan los html de obras y arqui para que aparezcan mejor en la pag.
 - Se crean algunas obras y arquitectos para probar + 2 usuarios. Todo completo
 
-13°COMMIT 
+13°COMMIT
 - Se creo la app “index” para que los textos de contenido del sitio sean editados por admin. 
 
 14º COMMIT

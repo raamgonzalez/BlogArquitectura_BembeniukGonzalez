@@ -8,8 +8,7 @@
 {% block contenido %}
 <h4 style="margin-left:1rem">Complete los campos a actualizar</h4>
 {% if form %}
-
-    <form style="margin-left:1rem" method="POST" action="">
+<form action="" method="POST" style="margin-left:40rem;margin-top:7rem" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
             {{form.as_table}}

@@ -6,12 +6,15 @@
 
 {% block contenido %}
 <div class="card" style="width: 18rem; margin-left:1rem">
+    {% if object.image %}
         <img src="{{arquitecto.image.url}}" class="card-img-top" alt="...">
+    {% endif %}
         <div class="card-body">
         <h5 class="card-title">{{object.nombre_apellido_arqui}}</h5>
-        <h5 class="card-text">{{object.descripcion}}</h5>
+        <p class="card-text">{{object.descripcion}}</p>
         <a href="/app_blog/update_arquitecto/{{object.id}}/" class="btn btn-primary">Editar</a>
         <a href="/app_blog/delete_arquitecto/{{object.id}}/" class="btn btn-danger">Eliminar</a>
     </div>
 </div>
 {% endblock %}
+

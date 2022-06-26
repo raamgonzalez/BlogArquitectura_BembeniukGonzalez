@@ -12,7 +12,9 @@
     {% for obra in obras %}
     <div class="col"></div>
         <div class="card" style="width: 18rem;">
+        {% if obra.image %}
             <img src="{{obra.image.url}}" class="card-img-top" alt="...">
+        {% endif %}
             <div class="card-body">
             <h5 class="card-title">{{obra.nombre_obra}}</h5>
             <p class="card-text">{{obra.ubicacion_obra}}</p>
@@ -25,3 +27,4 @@
 </div>
     {% endfor %}
 {% endblock %}
+

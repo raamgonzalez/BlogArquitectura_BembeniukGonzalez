@@ -13,7 +13,9 @@
         {% for obra in object_list %}
     <div class="col-4">
         <div class="card" style="width: 18rem; margin: 5px 5px;">
+        {% if obra.image %}
             <img src="{{obra.image.url}}" class="card-img-top" alt="...">
+        {% endif %}
             <div class="card-body">
             <h5 class="card-title">{{ obra.nombre_obra}}</h5>
             <p class="card-text">{{obra.ubicacion_obra}}</p>
