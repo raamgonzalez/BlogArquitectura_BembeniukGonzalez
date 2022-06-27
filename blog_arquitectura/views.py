@@ -7,7 +7,6 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from blog_arquitectura.forms import User_registration_form
-from django.contrib.auth.decorators import login_required
 
 def login_view(request):
 
@@ -71,6 +70,5 @@ def index(request):
 def about(request):
     return render(request,'about.html',context = {})
 
-@login_required
 def contact(request):
     return render(request,'contact.html')

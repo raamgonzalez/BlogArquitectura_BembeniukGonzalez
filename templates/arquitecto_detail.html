@@ -10,8 +10,8 @@
         <img src="{{arquitecto.image.url}}" class="card-img-top" alt="...">
     {% endif %}
         <div class="card-body">
-        <h5 class="card-title">{{object.nombre_apellido_arqui}}</h5>
-        <p class="card-text">{{object.descripcion}}</p>
+        <h4 class="card-title">{{object.nombre_apellido_arqui}}</h4>
+        <p class="card-text"><b>Descripción: </b>{{object.descripcion}}</p>
         <a href="/app_blog/update_arquitecto/{{object.id}}/" class="btn btn-primary">Editar</a>
         <a href="/app_blog/delete_arquitecto/{{object.id}}/" class="btn btn-danger">Eliminar</a>
     </div>

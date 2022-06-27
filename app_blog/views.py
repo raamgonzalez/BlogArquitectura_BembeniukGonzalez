@@ -7,6 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from app_blog.forms import obras_arq_view_form, arquitecto_view_form
 from django.http import HttpResponse
 
+
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 
 class Obras_arq_view(ListView):
@@ -17,14 +18,14 @@ class Detail_obrasarq(DetailView):
     model = Obra_arq
     template_name = 'obras_arq_detail.html'
 
-class Delete_obra(DeleteView):
+class Delete_obra(LoginRequiredMixin,DeleteView):
     model = Obra_arq
     template_name = 'delete_obra.html'
 
     def get_success_url(self):
         return reverse('obras_arq_view')
 
-class Update_obra(UpdateView):
+class Update_obra(LoginRequiredMixin,UpdateView):
     model =  Obra_arq
     template_name = 'update_obra.html'
     fields = '__all__'
@@ -40,14 +41,14 @@ class Detail_arquitecto(DetailView):
     model = Arquitecto
     template_name = 'arquitecto_detail.html'
 
-class Delete_arquitecto(DeleteView):
+class Delete_arquitecto(LoginRequiredMixin,DeleteView):
     model = Arquitecto
     template_name = 'delete_arqui.html'
 
     def get_success_url(self):
         return reverse('arquitectos_view')
 
-class Update_arquitecto(UpdateView):
+class Update_arquitecto(LoginRequiredMixin,UpdateView):
     model =  Arquitecto
     template_name = 'update_arqui.html'
     fields = '__all__'

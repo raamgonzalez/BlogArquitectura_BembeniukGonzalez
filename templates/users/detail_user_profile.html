@@ -13,7 +13,10 @@
         <img src="{{object.profile_image.url}}" class="card-img-top">
     {% endif %}
         <div class="card-body">
-            <h5 class="card-title">{{object.phone}}</h5>
+            <h5 class="card-title">{{object.user}}</h5>
+            <p class="card-text">{{object.phone}}</p>
+            <p class="card-text">{{object.descripcion}}</p>
+            <p class="card-text">{{object.link_url}}</p>
             <a href="/users/update-user-profile/{{object.id}}/" class="btn btn-primary">Editar</a>
         </div>
     </div>
@@ -21,4 +24,3 @@
 </div>
 
 {% endblock %}
-

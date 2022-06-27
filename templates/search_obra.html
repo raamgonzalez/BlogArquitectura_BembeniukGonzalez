@@ -17,14 +17,20 @@
         {% endif %}
             <div class="card-body">
             <h5 class="card-title">{{obra.nombre_obra}}</h5>
-            <p class="card-text">{{obra.ubicacion_obra}}</p>
-            <p class="card-text">{{obra.año}}</p>
-            <p class="card-text">{{obra.tipo}}</p>
-            <p class="card-text">{{obra.descripcion}}</p>
+            <p class="card-text"><b>Arquitecto: </b>{{obra.arquitecto}}</p>
+            <p class="card-text"><b>Ubicación: </b>{{obra.ubicacion_obra}}</p>
+            <p class="card-text"><b>Año: </b>{{obra.año}}</p>
+            <p class="card-text"><b>Tipo: </b>{{obra.tipo}}</p>
+            <p class="card-text"><b>Descripción: </b>{{obra.descripcion}}</p>
+            {% if request.user.is_authenticated %}
             <a href="/app_blog/update_obra/{{obra.id}}/" class="btn btn-primary">Editar</a>
             <a href="/app_blog/delete_obra/{{obra.id}}/" class="btn btn-danger">Eliminar</a>
+            {% endif %}
     </div>
 </div>
-    {% endfor %}
+{% endfor %}
 {% endblock %}
+
+
+
 

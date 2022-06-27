@@ -10,11 +10,12 @@
         <img src="{{obra_arq.image.url}}" class="card-img-top" alt="...">
     {% endif %}
         <div class="card-body">
-        <h5 class="card-title">{{object.nombre_obra}}</h5>
-        <p class="card-text">{{object.ubicacion_obra}}</p>
-        <p class="card-text">{{object.año}}</p>
-        <p class="card-text">{{object.tipo}}</p>
-        <p class="card-text">{{object.descripcion}}</p>
+        <h4 class="card-title">{{object.nombre_obra}}</h4>
+        <p class="card-text"><b>Arquitecto: </b>{{object.arquitecto}}</p>
+        <p class="card-text"><b>Ubicación: </b>{{object.ubicacion_obra}}</p>
+        <p class="card-text"><b>Año: </b>{{object.año}}</p>
+        <p class="card-text"><b>Tipo: </b>{{object.tipo}}</p>
+        <p class="card-text"><b>Descripción: </b>{{object.descripcion}}</p>
         <a href="/app_blog/update_obra/{{object.id}}/" class="btn btn-primary">Editar</a>
         <a href="/app_blog/delete_obra/{{object.id}}/" class="btn btn-danger">Eliminar</a>
         </div>

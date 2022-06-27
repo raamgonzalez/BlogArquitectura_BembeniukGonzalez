@@ -17,10 +17,11 @@
             <img src="{{obra.image.url}}" class="card-img-top" alt="...">
         {% endif %}
             <div class="card-body">
-            <h5 class="card-title">{{ obra.nombre_obra}}</h5>
-            <p class="card-text">{{obra.ubicacion_obra}}</p>
-            <p class="card-text">{{obra.año}}</p>
-            <p class="card-text">{{obra.tipo}}</p>
+            <h4 class="card-title">{{obra.nombre_obra}}</h4>
+            <p class="card-text"><b>Arquitecto: </b>{{obra.arquitecto}}</p>
+            <p class="card-text"><b>Ubicación: </b>{{obra.ubicacion_obra}}</p>
+            <p class="card-text"><b>Año: </b>{{obra.año}}</p>
+            <p class="card-text"><b>Tipo: </b>{{obra.tipo}}</p>
             <a href="/app_blog/detail_obrasarq/{{obra.id}}/" class="btn btn-primary">Ver detalle</a>
         </div>
     </div>
@@ -28,3 +29,5 @@
     {% endfor %}
 
 {% endblock %}
+
+
