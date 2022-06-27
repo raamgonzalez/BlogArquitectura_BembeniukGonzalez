@@ -14,7 +14,7 @@ Desde una consola o el bash de git usar el siguiente comando:
 2. Se crea una página de "Nosotros" en la cual describimos brevemente el proyecto y nuestros intereses
 3. Se crea una página de contacto
 5. Se pide registro y logueo para poder hacer uso de los formularios
-6. Se proponen 2 clases en "models": "Obras de Arquitectura" y "Arquitectos", siendo esta ultima una categría de la primera
+6. Se proponen 2 clases en "models": "Obras de Arquitectura" y "Arquitectos", siendo esta ultima una categoría de la primera
 7. Cada modelo cuenta con un formulario que permite agregar contenido
 8. Se incorpora un boton "search" para poder buscar en la base de datos
 
