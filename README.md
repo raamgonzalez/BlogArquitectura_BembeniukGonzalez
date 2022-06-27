@@ -75,5 +75,16 @@ Desde una consola o el bash de git usar el siguiente comando:
 - Se agregan templates correspondientes
 - Se actualizan html y se mejora la calidad de visualización del sitio
 
+15º COMMIT
+- Se agrega información de /about
+- Se corrige error cuando se modifica o se borra imagen
+
+16º COMMIT
+- Se agrega LoginRequiredMixin para que no se pueda editar obra o arquitecto sin estar registrado
+- Se agrega categoria Arquitecto dentro de la card Obra_Arq
+- Se mejora visualización de templates
+
+
+
 
 
